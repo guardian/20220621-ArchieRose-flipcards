@@ -35,7 +35,7 @@ export default class FlipCard extends Component {
                     <div class="back">
                         <div class="content">
                             <div class="border"></div>
-                            <div dangerouslySetInnerHTML={{__html: props.back}}></div>
+                            <div className="content-wrap" dangerouslySetInnerHTML={{__html: props.back}}></div>
                         </div>
                         <button class="btn-flip" onclick={this.handeClick.bind(this)}><FlipIcon/></button>
                     </div>
@@ -44,7 +44,9 @@ export default class FlipCard extends Component {
                             // backgroundImage: ` linear-gradient(to top, #0008, transparent 54%), url(<%= path %>/${props.image})`
                         }}>
                             {/* <div class="border"></div> */}
-                            <img src={`${assetsPath}/${props.image}`} alt="" class={props.imagePos} />
+                            <div className={`img ${props.imagePos}`} >
+                                <div style={{backgroundImage: `url(${assetsPath}/${props.image})`}} />
+                            </div>
                             <div className="title">
                                 <h2 dangerouslySetInnerHTML={{__html: props.front}}></h2>
                             </div>

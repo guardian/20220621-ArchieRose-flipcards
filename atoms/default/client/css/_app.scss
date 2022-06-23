@@ -67,12 +67,12 @@ h1, h2 {
   font-size: 36/16 + rem;
   // text-decoration: underline;
   // text-transform: uppercase;
-  font-family: "Display Sans", serif;
+  font-family: "Guardian Egyptian Web", "Display Sans", serif;
   
   
   span {
-    font-weight: 700;
-    font-family: "Display Sans", serif;
+    font-weight: 400;
+    font-family: "Guardian Egyptian Web", "Display Sans", serif;
   }
   @include mq(tablet) {
     font-size: 64/16 + rem;
@@ -129,10 +129,11 @@ p {
 }
 
 #Glabs {
-  background-color: #CDE4FF;
-  .content {
-    color: #182050;
-  }
+  background-color: #57534C;
+  color: #F9F2DD;
+  // .content {
+  //   color: #182050;
+  // }
 }
 
 .scroll-icon {
@@ -284,7 +285,7 @@ section.footer {
     display: block;
     margin: 2px;
     height: 1px;
-    background: #7e7d7d;
+    background: #9B9B9B;
   }
 }
 

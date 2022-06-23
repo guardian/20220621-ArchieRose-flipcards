@@ -32,7 +32,7 @@
             
           }
           @include mq(desktop) {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             .flipcard {
               .front, .back {
                 // p, a {
@@ -91,18 +91,18 @@
       perspective: 1500px;
       margin: auto;
       height: 460px;
-      width: 330px;
+      width: 300px;
 
-      border-radius: 15px;
+      // border-radius: 15px;
       --cardbg: #F4BD42;
       // @include mq(tablet) {
         // max-width: 410px;
         // height: 690px;
       // }
-      // @include mq(desktop) {
-      //   height: 460px;
-      //   width: 330px;
-      // }
+      @include mq(desktop) {
+        height: 610px;
+        width: 480px;
+      }
       // @include mq(wide) {
       //   height: 460px;
       //   width: 330px;
@@ -130,7 +130,7 @@
         width: 100%;
         height: 100%;
         box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 15px;
+        // border-radius: 15px;
       
         transition: all 1s;
         transform-style: preserve-3d;
@@ -175,10 +175,10 @@
         // background: white;
         backface-visibility: hidden;
         background-color: var(--cardbg);
-        border-radius: 15px;
+        // border-radius: 15px;
         .content {
           position: relative;
-          border-radius: 15px 15px 0 0;
+          // border-radius: 15px 15px 0 0;
           @include mq(desktop) {
             margin-bottom: 0.3rem;
           }
@@ -192,14 +192,20 @@
             text-align: center;
             font-size: 36/16 + rem;
             line-height: 1.1;
-            font-weight: 800;
+            font-weight: 400;
             // font-style: italic;
-            font-family: "Display Sans";
+            font-family: "Guardian Egyptian Web", "Display Sans";
             // color: #FFF7E6;
           }
-          img {
+          .img {
             width: 90%;
+            height: 90%;
             margin: auto;
+            >div {
+              background-size: cover;
+              background-position: 50%;
+              height: 100%;
+            }
             // position: absolute;
             // bottom: 0;
             // width: 100%;
@@ -234,10 +240,11 @@
         z-index: 1;
         cursor: pointer;
         text-decoration: none;
+        color: #fff;
         .content {
           // display: flex;
           position: relative;
-          padding-top: 1.5rem;
+          padding-top: 5%;
           justify-content: flex-end;
           flex-direction: column;
           background-size: cover;
@@ -248,8 +255,9 @@
             padding-top: 1rem;
             top: 0;
             left: 0;
+            width: 100%;
             h2 {
-              width: 96%;
+              width: 86%;
               margin-left: auto;
               margin-right: auto;
   
@@ -259,13 +267,18 @@
             }
           }
         }
+        .img {
+          border: 1px solid #88754D;
+          padding: 4px;
+        }
       }
       .back {
         transform: rotateY( 180deg );
         z-index: 2;
+        background-color: #351515;
         .content {
           padding:2.4rem;
-          color: #182050;
+          color: #F9F2DD;
           display: flex;
           align-items: center;
           
@@ -273,7 +286,7 @@
             display: none;
           }
           a {
-            color: #182050;
+            color: #F9F2DD;
 
           }
           h2 {
@@ -283,7 +296,16 @@
             font-weight: 900;
             font-style: italic;
           }
-  
+          .content-wrap {
+            padding: 2.5rem 0;
+            border: 1px solid #88754D;
+            border-left: none;
+            border-right: none;
+
+            p:first-child {
+              margin-top: 0;
+            }
+          }
         }
         .btn-flip {
             svg {

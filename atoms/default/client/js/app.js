@@ -124,12 +124,14 @@ const Footer = ({content, related, shareUrl}) => {
                 </div>
             </section>
 
+            {related.length > 0 &&
             <section className="related">
                     <div className="mx-auto" >
                         <h3>Related content</h3>
                         <RelatedContent cards={related} />
                     </div>
             </section>
+            }
         </Fragment>
     )
 }
@@ -161,7 +163,7 @@ const Main = () => {
     dispatch = useDispatch();
 
     useEffect(()=>{
-        dispatch( fetchData('https://interactive.guim.co.uk/docsdata/1gbA08DMLE-oVZ5BY-kocp03NRG-em9kt00pD3rnaUxs.json') );
+        dispatch( fetchData('https://interactive.guim.co.uk/docsdata/1RlfJnyzwn2qJGZUXXo7zxqTUhLpWKsN7myuqirR5BLA.json') );
     },[]);
 
 
