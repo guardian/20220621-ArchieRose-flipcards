@@ -130,7 +130,11 @@ p {
 
 #Glabs {
   background-color: #57534C;
-  color: #F9F2DD;
+  
+  &, .content {
+    color: #F9F2DD;
+  }
+
   // .content {
   //   color: #182050;
   // }
